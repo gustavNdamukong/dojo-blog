@@ -1,0 +1,96 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "How to better yourself",
+      "body": "I used to be a better dev",
+      "tags": [
+        "webdev",
+        "better"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Testing blog post",
+      "body": "Testing blocg post content here",
+      "tags": [
+        "testing",
+        "blogpostTest"
+      ],
+      "id": 4
+    },
+    {
+      "title": "agaion",
+      "body": "fffwfwfwfwf",
+      "tags": [
+        "again",
+        "oneoh"
+      ],
+      "id": 5
+    },
+    {
+      "title": "once more haha",
+      "body": "guggggigiuiguigiuuigigigigi",
+      "tags": [
+        "gig",
+        "gigo"
+      ],
+      "id": 6
+    },
+    {
+      "title": "kkkkkkkk",
+      "body": "kkkkkkkk",
+      "tags": [
+        "jk",
+        "kk"
+      ],
+      "id": 7
+    },
+    {
+      "title": "gggg",
+      "body": "ggggggg",
+      "tags": [
+        "gg",
+        "ggg"
+      ],
+      "id": 8
+    },
+    {
+      "title": "aaaaaaaa",
+      "body": "aaaaa aaaaa aaaaaa aaaaaa",
+      "tags": [
+        "aa",
+        "aaa"
+      ],
+      "id": 9
+    },
+    {
+      "title": "bbb",
+      "body": "bbb bbb bbb bbb",
+      "tags": [
+        "bb",
+        "bbb"
+      ],
+      "id": 10
+    }
+  ]
+}
