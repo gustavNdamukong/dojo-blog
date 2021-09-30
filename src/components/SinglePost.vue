@@ -2,7 +2,7 @@
   <div class="post">
     <router-link :to="{ name: 'Details', params: { id: post.id }}">  
         <h3>{{ post.title }}</h3>
-    </router-link> 
+    </router-link>
     <p>{{ snippet }}</p>
     <span v-for="tag in post.tags" :key="tag">
       <router-link :to="{ name: 'Tag', params: { tag: tag }}" class="tagLink">
@@ -22,6 +22,7 @@ import { computed } from 'vue'
 export default {
   props: ['post'],
   setup(props) {
+    // console.log('ID: '+props.post.id+'/ title: '+props.post.title+'/ body: '+props.post.body)
     const snippet = computed(() => {
       return props.post.body.substring(0, 100) + '...'
     })

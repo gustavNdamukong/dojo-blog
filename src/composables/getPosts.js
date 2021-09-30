@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { projectFirestore } from '../firebase/config'
+import { db } from '../firebase/config'
 
 const getPosts = () => {
     const posts = ref([])
@@ -13,11 +13,15 @@ const getPosts = () => {
             // await new Promise(resolve => {
             //     setTimeout(resolve, 2000)
             // })
-            
-            const res = await projectFirestore.collection('posts').get()
-            
-            console.log('RES IS:   '+res)
-            // console.log(posts.value)
+
+            //--------------------------------
+            const res = await db.collection('posts')
+                .orderBy('createdAt', 'desc')
+                .get()
+            posts.value = res.docs.map(doc => {
+                return { ...doc.data(), id: doc.id }
+            })
+            //--------------------------------
         }
         catch(err) {
             error.value = err.message

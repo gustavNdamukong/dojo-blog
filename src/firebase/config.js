@@ -1,9 +1,6 @@
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
-import * as firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/storage'
-
-// init firebase
 const firebaseConfig = {
     apiKey: "AIzaSyD-U_BZvhRSTJKgjqVaD__V7qrIRuiw6tQ",
     authDomain: "fir-training-7ea1d.firebaseapp.com",
@@ -20,9 +17,6 @@ const firebaseApp = firebase.initializeApp(firebaseConfig)
 
 // Initialize Cloud Firestore through Firebase
 const db = firebaseApp.firestore()
-console.log(db)
+const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-// init firestore service (in case we ever want to store any fileson Firebase's firestore service)
-// const projectFirestore = con.firestore()
-
-export { db }
+export { db, timestamp }

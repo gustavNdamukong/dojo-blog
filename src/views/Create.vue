@@ -26,6 +26,7 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { db, timestamp } from '../firebase/config'
 
 export default {
     setup() {
@@ -51,17 +52,13 @@ export default {
             let data = {
                 title: title.value,
                 body: body.value,
-                tags: tags.value
-            }
-            await fetch(' http://localhost:3000/posts', {
-                method: 'POST',
-                headers: { 'Content-Type':  'application/json' },
-                // convert the data into a json string
-                body: JSON.stringify(data)
-            }).then(() => {
-                // redirect to the home page
-                router.push({ path: '/' })
-            }).catch((err) => console.log(err))
+                tags: tags.value,
+                createdAt: timestamp() 
+            }    
+            const res = await db.collection('posts').add(data)
+            // console.log(res)
+
+            router.push({ name: 'Home' })
         }
 
         return { title, body, tag, handleKeydown, tags, handleSubmit }
